@@ -10,6 +10,6 @@ module.exports = {
     port:8087,
     proxy: 'http://localhost:8888',
   },
-  publicPath: '/website/' // publicPath应与仓库名称相同
+  publicPath: '/' // publicPath应与仓库名称相同
 }
 
