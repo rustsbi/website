@@ -1,66 +1,85 @@
 <template>
-	<Layout>
-		<div class="section">
-			<div style="max-width: 1160px">
+  <Layout>
+    <div class="section">
+      <div style="max-width: 1160px">
+        <div class="about-container">
+          <div class="am-g">
+            <div class="am-u-md-6">
+              <div class="our-company-text">
+                <h3>{{ $t('message.historyTitle') }}</h3>
+                <p>
+                  {{ $t('message.historyContent1') }}
+                </p>
+                <p>
+                  {{ $t('message.historyContent2') }}
+                </p>
+              </div>
+            </div>
 
-				<div class="about-container">
-					<div class="am-g">
-						<div class="am-u-md-6">
-							<div class="our-company-text">
-								<h3>{{ $t('message.historyTitle') }}</h3>
-								<p>
-									{{ $t('message.historyContent1') }}
-								</p>
-								<p>
-									{{ $t('message.historyContent2') }}
-								</p>
-							</div>
-						</div>
+            <div class="am-u-md-6">
+              <div class="our-company-quote">
+                <div class="am-g">
+                  <div class="am-u-md-6">
+                    <div class="our-company-img">
+                      <img
+                        src="../assets/images/us/01.jpg"
+                        alt=""
+                      >
+                    </div>
+                  </div>
 
-						<div class="am-u-md-6">
-							<div class="our-company-quote">
-								<div class="am-g">
-									<div class="am-u-md-6">
-										<div class="our-company-img">
-											<img src="../assets/images/us/01.jpg" alt="" />
-										</div>
-									</div>
+                  <div class="am-u-md-6">
+                    <div class="our-company-img">
+                      <img
+                        src="../assets/images/us/02.jpg"
+                        alt=""
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-									<div class="am-u-md-6">
-										<div class="our-company-img">
-											<img src="../assets/images/us/02.jpg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <hr class="section_divider -narrow">
 
-		<hr class="section_divider -narrow">
+    <div class="section">
+      <div
+        class="container"
+        style="max-width: 1160px"
+      >
+        <div class="section--header">
+          <h2 class="section--title">
+            {{ $t('message.teamTitle') }}
+          </h2>
+        </div>
 
-		<div class="section">
-			<div class="container" style="max-width: 1160px">
-				<div class="section--header">
-					<h2 class="section--title">{{ $t('message.teamTitle') }}</h2>
-				</div>
-
-				<div class="index-container">
-					<div class="am-g">
-						<div class="am-u-md-2" v-for="(partner, index) in partnersList" :key="index">
-							<div class="partners_item">
-								<img class="partners_item--logo" :src="partner.cover" alt="">
-								<h3 class="partners_item--title">{{ partner.title }}</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</Layout>
+        <div class="index-container">
+          <div class="am-g">
+            <div
+              v-for="(partner, index) in partnersList"
+              :key="index"
+              class="am-u-md-2"
+            >
+              <div class="partners_item">
+                <img
+                  class="partners_item--logo"
+                  :src="partner.cover"
+                  alt=""
+                >
+                <h3 class="partners_item--title">
+                  {{ partner.title }}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Layout>
 </template>
 
 <script>

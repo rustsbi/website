@@ -1,13 +1,13 @@
 <template>
-	<main class="page-wrapper">
-		<Header/>
+  <main class="page-wrapper">
+    <Header />
 		
-		<div class="main-content">
-			<slot></slot>
-		</div>
+    <div class="main-content">
+      <slot />
+    </div>
 	
-		<Footer/>
-	</main>
+    <Footer />
+  </main>
 </template>
 
 <script>
