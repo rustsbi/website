@@ -1,14 +1,18 @@
-
-
 .headline {
-    display: flex;
-    flex-direction: row;
+	padding: 0 15px;
 }
 
 .headline--header {
-    width: 70%;
-    max-width: 70rem;
-    margin-right: 40px;
+	width: 70%;
+	flex-grow: 1;
+	margin-bottom: 15px;
+	padding: 5px;
+}
+
+.headline--container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .headline--title {
@@ -27,15 +31,13 @@
 }
 
 .headline--right {
-    width: 30%;
-    padding-right: 0;
-    padding-left: 50px;
+	flex-grow: 1;
+	padding: 5px;
 }
 
 .headline--button {
     color: var(--headlineButtonColor);
     font-size: 2.25rem;
-    margin-top: 60px;
 
     display: inline-block;
     width: 100%;
@@ -92,17 +94,19 @@
     /* 自动换行 */
     gap: 2rem;
     /* 控制卡片之间的间距 */
-    justify-content: space-between;
+    justify-content: center;
     /* 子项之间平均分布 */
     margin: 0 auto;
     /* 中心对齐容器 */
     margin-top: 50px;
+	padding: 15px;
 }
 
 .users {
-    flex: 1 1 calc(25% - 2rem);
+    flex: 1 1 auto;
     /* 每个元素占 25% 减去间距 */
-    max-width: calc(25% - 2rem);
+	width: calc( max( 250px, 25% - 2em ) );
+    /* max-width: calc( 25% - 2em ); */
     /* 防止宽度超出 */
     box-sizing: border-box;
     /* 包括 padding */
@@ -152,5 +156,48 @@
     display: block;
     padding: 0;
     margin: 0 auto;
-    width: 1170px
+    width: 80vw;
+}
+
+.am-nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.am-nav > li {
+	display: flex;
+	width: min-content;
+	padding-left: 10px !important;
+}
+
+@media screen and (max-width: 640px) {
+	.nav {
+		flex-wrap: wrap;
+	}
+	.am-nav {
+		margin-top: 15px;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+	.am-nav > li {
+		width: 100%;
+		padding: 10px !important;
+	}
+	.am-nav-justify {
+		width: 100% !important;
+	}
+}
+
+.clean-btn-container {
+	align-self: center;
+}
+
+.nav-logo {
+	margin: 10px;
+}
+
+.am-nav-justify {
+	width: auto !important;
+	min-width: 50%;
 }

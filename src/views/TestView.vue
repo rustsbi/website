@@ -1,88 +1,129 @@
 <template>
-    <Layout>
-        <div class="section">
-            <div class="headline" style="max-width: 1160px;">
-                <div class="headline--header">
-                    <h2 class="headline--title">{{ $t('message.whatIsTitle') }}</h2>
-                    <p class="headline--description">
-                        {{ $t('message.whatIsContent') }}
-                    </p>
-                </div>
-
-                <div class="headline--right">
-                    <a class="headline--button" href="https://docs.rs/rustsbi/latest/rustsbi">get start</a>
-                </div>
-            </div>
+  <Layout>
+    <div class="section">
+      <div
+        class="headline"
+        style="max-width: 1160px;"
+      >
+        <div class="headline--header">
+          <h2 class="headline--title">
+            {{ $t('message.whatIsTitle') }}
+          </h2>
+          <p class="headline--description">
+            {{ $t('message.whatIsContent') }}
+          </p>
         </div>
 
-        <hr class="section_divider -narrow">
+        <div class="headline--right">
+          <a
+            class="headline--button"
+            href="https://docs.rs/rustsbi/latest/rustsbi"
+          >get start</a>
+        </div>
+      </div>
+    </div>
 
-        <div class="section">
-            <div class="container" style="max-width: 1160px;">
-                <div class="section--header">
-                    <h2 class="section--title">{{ $t('message.whatCanDoTitle') }}</h2>
-                    <div class="index-container">
-                        <div class="row">
-                            <div class="col1">
-                                <h3 class="canDo--title">{{ $t('message.whatCanDoTitle1') }}</h3>
-                                <p class="canDo--description">
-                                    {{ $t('message.whatCanDoContent1') }}
-                                </p>
-                            </div>
-                            <div class="col1">
-                                <h3 class="canDo--title">{{ $t('message.whatCanDoTitle2') }}</h3>
-                                <p class="canDo--description">
-                                    {{ $t('message.whatCanDoContent2') }}
-                                </p>
-                            </div>
-                            <div class="col1">
-                                <h3 class="canDo--title">{{ $t('message.whatCanDoTitle3') }}</h3>
-                                <p class="canDo--description">
-                                    {{ $t('message.whatCanDoContent3') }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <hr class="section_divider -narrow">
+
+    <div class="section">
+      <div
+        class="container"
+        style="max-width: 1160px;"
+      >
+        <div class="section--header">
+          <h2 class="section--title">
+            {{ $t('message.whatCanDoTitle') }}
+          </h2>
+          <div class="index-container">
+            <div class="row">
+              <div class="col1">
+                <h3 class="canDo--title">
+                  {{ $t('message.whatCanDoTitle1') }}
+                </h3>
+                <p class="canDo--description">
+                  {{ $t('message.whatCanDoContent1') }}
+                </p>
+              </div>
+              <div class="col1">
+                <h3 class="canDo--title">
+                  {{ $t('message.whatCanDoTitle2') }}
+                </h3>
+                <p class="canDo--description">
+                  {{ $t('message.whatCanDoContent2') }}
+                </p>
+              </div>
+              <div class="col1">
+                <h3 class="canDo--title">
+                  {{ $t('message.whatCanDoTitle3') }}
+                </h3>
+                <p class="canDo--description">
+                  {{ $t('message.whatCanDoContent3') }}
+                </p>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section_divider -narrow">
+
+    <div class="section">
+      <div
+        class="container"
+        style="max-width: 1160px;"
+      >
+        <div class="section--header">
+          <h2 class="section--title">
+            {{ $t('message.theyAreUsingTitle') }}
+          </h2>
         </div>
 
-        <hr class="section_divider -narrow">
-
-        <div class="section">
-            <div class="container" style="max-width: 1160px;">
-                <div class="section--header">
-                    <h2 class="section--title">{{ $t('message.theyAreUsingTitle') }}</h2>
-                </div>
-
-                <div class="users-container">
-                    <div class="users" v-for="(user, index) in userList" :key="index">
-                        <div class="users_item">
-                            <img class="users_item--logo" :src="user.cover" alt="">
-                            <h3 class="users_item--title">
-                                <p>
-                                    <a :href="user.url" target="_blank" style="word-break: break-all;">
-                                        {{ user.title }}
-                                    </a>
-                                </p>
-                            </h3>
-                            <div class="users_item--text" v-if="$i18n.locale === 'en'">
-                                <p>
-                                    {{ user.textEn }}
-                                </p>
-                            </div>
-                            <div class="users_item--text" v-if="$i18n.locale === 'zh'">
-                                <p>
-                                    {{ user.textZh }}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="users-container">
+          <div
+            v-for="(user, index) in userList"
+            :key="index"
+            class="users"
+          >
+            <div class="users_item">
+              <img
+                class="users_item--logo"
+                :src="user.cover"
+                alt=""
+              >
+              <h3 class="users_item--title">
+                <p>
+                  <a
+                    :href="user.url"
+                    target="_blank"
+                    style="word-break: break-all;"
+                  >
+                    {{ user.title }}
+                  </a>
+                </p>
+              </h3>
+              <div
+                v-if="$i18n.locale === 'en'"
+                class="users_item--text"
+              >
+                <p>
+                  {{ user.textEn }}
+                </p>
+              </div>
+              <div
+                v-if="$i18n.locale === 'zh'"
+                class="users_item--text"
+              >
+                <p>
+                  {{ user.textZh }}
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-
-    </Layout>
+      </div>
+    </div>
+  </Layout>
 </template>
 
 <script>
