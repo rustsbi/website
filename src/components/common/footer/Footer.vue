@@ -12,9 +12,9 @@
             <div class="footer_about">
               <p class="footer_about--text">
                 {{ $t('message.refer') }} <a
-                  href="https://github.com/rustsbi/prototyper"
+                  href="https://github.com/rustsbi/rustsbi"
                   target="_blank"
-                >https://github.com/rustsbi/prototyper</a>
+                >https://github.com/rustsbi/rustsbi</a>
               </p>
             </div>
             <strong class="footer_main--column_title">{{ $t('message.basicInfo') }}</strong>
@@ -35,7 +35,7 @@
               <li class="footer_contact_info--item">
                 <i
                   class="am-icon-mail-forward"
-                /><span>{{ $t('message.contactEmail') }}</span>
+                /><span v-html="$t('message.contactEmail')"></span>
               </li>
               <li class="footer_contact_info--item">
                 <i

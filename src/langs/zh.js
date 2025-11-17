@@ -7,7 +7,7 @@ export default {
       refer: '请参阅',
       documentLink: '文档链接',
       contactDetails: '联系详情',
-      contactEmail: '联系邮箱: rustsbi@163.com',
+      contactEmail: '联系邮箱: <a href="mailto:contact@rustsbi.com">contact@rustsbi.com</a>',
       contactAddress: '总部地址: 湖北省武汉市东西湖区国家网络安全基地明德楼B513实验室',
       whatIsTitle: 'RustSBI是什么',
       whatIsContent: 'RustSBI是完整的安全引导程序实现，适用于为固件、虚拟化软件和模拟器实现RISC-V SBI接口',
