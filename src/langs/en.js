@@ -7,7 +7,7 @@ export default {
     refer: 'Please Refer To',
     documentLink: 'Documentation Link',
     contactDetails: 'Contact Details',
-    contactEmail: 'Email: rustsbi@163.com',
+    contactEmail: 'Email: <a href="mailto:contact@rustsbi.com">contact@rustsbi.com</a>',
     contactAddress: 'Address: Laboratory B513, Mingde Building, National Cybersecurity Center, Dongxihu District, Wuhan, Hubei Province',
     whatIsTitle: 'What is RustSBI',
     whatIsContent: 'RustSBI is a complete secure bootloader implementation designed to implement the RISC-V SBI interface for firmware, virtualization software, and simulators.',
